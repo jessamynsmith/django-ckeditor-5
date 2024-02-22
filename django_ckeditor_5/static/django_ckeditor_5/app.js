@@ -82,3 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+document.addEventListener("shown.bs.modal", () => {
+    createEditors();
+});
