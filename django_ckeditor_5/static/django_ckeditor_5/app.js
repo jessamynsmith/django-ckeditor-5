@@ -80,8 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof django === "object" && django.jQuery) {
         django.jQuery(document).on("formset:added", createEditors);
     }
-});
-
-document.addEventListener("shown.bs.modal", () => {
-    createEditors();
+    if (typeof jQuery !== 'undefined') {
+        jQuery(document).on("shown.bs.modal", createEditors);
+    }
 });
